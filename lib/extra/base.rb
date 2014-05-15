@@ -13,7 +13,11 @@ module Extra
     end
 
     def self.get(path, params)
-      JSON.parse(execute(:get, "#{path}?#{to_params(params)}")).map { |params| new params }
+      parse_get("#{path}?#{to_params(params)}").map { |params| new params }
+    end
+
+    def self.parse_get(path)
+      JSON.parse execute(:get, path)
     end
 
     def self.post(path, body, &block)

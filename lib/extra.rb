@@ -1,5 +1,6 @@
 require 'rest-client'
 require "extra/base"
+require "extra/item"
 require "extra/order"
 require "extra/product"
 require "extra/version"
