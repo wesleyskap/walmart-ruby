@@ -1,4 +1,4 @@
-module B2W
+module Extra
   class Product < Base
     def self.create!(params)
       post(:product, params) do |body, request, result|

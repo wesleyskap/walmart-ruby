@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'webmock'
 require 'vcr'
-require 'b2w'
+require 'extra'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
@@ -12,4 +12,5 @@ end
 RSpec.configure do |config|
 end
 
-B2W.config! token: File.read('spec/token').strip, sandbox: true
+config = YAML.load(File.read('spec/config.yml'))
+Extra.config! app_token: config['app_token'], auth_token: config['auth_token'], sandbox: true

@@ -1,11 +1,11 @@
 require 'rest-client'
-require "b2w/base"
-require "b2w/order"
-require "b2w/product"
-require "b2w/version"
+require "extra/base"
+require "extra/order"
+require "extra/product"
+require "extra/version"
 require "json"
 
-module B2W
+module Extra
   def self.config!(config)
     @config = config
   end

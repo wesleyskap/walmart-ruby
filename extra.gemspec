@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'b2w/version'
+require 'extra/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "b2w"
-  spec.version       = B2W::VERSION
+  spec.name          = "extra"
+  spec.version       = Extra::VERSION
   spec.authors       = ["Diego Carrion"]
   spec.email         = ["dc.rec1@gmail.com"]
-  spec.summary       = "Ruby interface to B2W"
-  spec.description   = "Ruby interface to B2W"
+  spec.summary       = "Ruby interface to Extra"
+  spec.description   = "Ruby interface to Extra"
   spec.homepage      = ""
   spec.license       = "MIT"
 

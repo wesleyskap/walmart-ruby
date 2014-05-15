@@ -1,0 +1,122 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.extra.com.br/api/v1/orders/status/new?_limit=25&_offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Nova-Auth-Token:
+      - WOzY6C8kEFGM
+      Nova-App-Token:
+      - OmehvO0ZHM2s
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 May 2014 15:19:25 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '3395'
+      Keep-Alive:
+      - timeout=60, max=899
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Totalrows:
+      - '2'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sib3JkZXJJZCI6IjIxOTgwMSIsIm9yZGVyTWFzdGVySWQiOiIyMTk4Iiwi
+        dG90YWxBbW91bnQiOjQ1Ny44MCwicHVyY2hhc2VEYXRlIjoiMjAxNC0wNS0x
+        M1QyMjoxNDozOS4wMDAtMDM6MDAiLCJmcmVpZ2h0Q2hhcmdlZEFtb3VudCI6
+        MjAsImZyZWlnaHRBY3R1YWxBbW91bnQiOjIwLCJvcmRlckl0ZW1zIjpbeyJv
+        cmRlckl0ZW1JZCI6IjIxOTQ3ODc2LTEiLCJza3VJZCI6IjIxOTQ3ODc2Iiwi
+        c2FsZVByaWNlIjoyMTkuOTAsImRlbGl2ZXJ5RGF0ZSI6IjIwMTQtMDUtMTNU
+        MDA6MDA6MDAuMDAwLTAzOjAwIiwiZnJlaWdodFRpbWUiOjEsImxlYWRUaW1l
+        IjoxfSx7Im9yZGVySXRlbUlkIjoiMjE5NDc4NzYtMiIsInNrdUlkIjoiMjE5
+        NDc4NzYiLCJzYWxlUHJpY2UiOjIxOS45MCwiZGVsaXZlcnlEYXRlIjoiMjAx
+        NC0wNS0xM1QwMDowMDowMC4wMDAtMDM6MDAiLCJmcmVpZ2h0VGltZSI6MSwi
+        bGVhZFRpbWUiOjF9LHsib3JkZXJJdGVtSWQiOiIyMTkzMjg5NC0xIiwic2t1
+        SWQiOiIyMTkzMjg5NCIsInNhbGVQcmljZSI6OS4wMCwiZGVsaXZlcnlEYXRl
+        IjoiMjAxNC0wNS0xM1QwMDowMDowMC4wMDAtMDM6MDAiLCJmcmVpZ2h0VGlt
+        ZSI6MSwibGVhZFRpbWUiOjF9LHsib3JkZXJJdGVtSWQiOiIyMTkzMjg5NC0y
+        Iiwic2t1SWQiOiIyMTkzMjg5NCIsInNhbGVQcmljZSI6OS4wMCwiZGVsaXZl
+        cnlEYXRlIjoiMjAxNC0wNS0xM1QwMDowMDowMC4wMDAtMDM6MDAiLCJmcmVp
+        Z2h0VGltZSI6MSwibGVhZFRpbWUiOjF9XSwiYmlsbGluZ0luZm9ybWF0aW9u
+        cyI6W3siYWRkcmVzcyI6IkF2ZW5pZGEgUGF1bGlzdGEiLCJhZGRyZXNzTnIi
+        OiIxODk3IiwiYWRkaXRpb25hbEluZm8iOiJBcCAxMDEiLCJxdWFydGVyIjoi
+        Q2VudHJvIiwiY2l0eSI6IlPDo28gUGF1bG8iLCJzdGF0ZSI6IlNQIiwiY291
+        bnRyeUlkIjoiQlIiLCJwb3N0YWxDZCI6IjEyMzQ1MDAwIiwicmVmZXJlbmNl
+        IjpudWxsLCJhZGRyZXNzRXh0cmFGaWVsZDEiOm51bGwsImFkZHJlc3NFeHRy
+        YUZpZWxkMiI6bnVsbCwiYnVpbGRpbmdObSI6bnVsbH1dLCJzaGlwcGluZ0lu
+        Zm9ybWF0aW9uc0xpc3QiOlt7ImRlbGl2ZXJ5VHlwZSI6Ik5PUiIsInNjaGVk
+        dWxlZERhdGUiOm51bGwsInNjaGVkdWxlZFBlcmlvZCI6bnVsbCwicmVjaXBp
+        ZW50TmFtZSI6IkNsaWVudGVNYXJrdHBsYWNlIiwiYWRkcmVzcyI6IkF2ZW5p
+        ZGEgUGF1bGlzdGEiLCJhZGRyZXNzTnIiOiIxODk3IiwiYWRkaXRpb25hbElu
+        Zm8iOiJBcCAxMDEiLCJxdWFydGVyIjoiQ2VudHJvIiwiY2l0eSI6IlPDo28g
+        UGF1bG8iLCJzdGF0ZSI6IlNQIiwiY291bnRyeUlkIjoiQlIiLCJwb3N0YWxD
+        ZCI6IjEyMzQ1MDAwIiwicmVmZXJlbmNlIjpudWxsLCJhZGRyZXNzRXh0cmFG
+        aWVsZDEiOm51bGwsImFkZHJlc3NFeHRyYUZpZWxkMiI6bnVsbCwiYnVpbGRp
+        bmdObSI6bnVsbH1dLCJkb2N1bWVudE5yIjoiMDAwMDAxMjM0NTYiLCJpbnNj
+        cmljYW9Fc3RhZHVhbCI6bnVsbCwiY3VzdG9tZXJFbWFpbCI6ImF0ZW5kaW1l
+        bnRvK09DXzIwOTAwMDEwMDgxMEBta3RwLmV4dHJhLmNvbS5iciIsImN1c3Rv
+        bWVyTmFtZSI6IkNsaWVudGUgTWFya3RwbGFjZSIsImN1c3RvbWVyR2VuZGVy
+        IjoiTSIsInBheW1lbnRUcElkIjoxLCJmcmVpZ2h0QWRkaXRpb25hbEluZm8i
+        Om51bGwsImFwcHJvdmVkRGF0ZSI6bnVsbCwidHJhY2tpbmdMaXN0IjpbXSwi
+        Y3VzdG9tZXJQaG9uZU51bWJlciI6IjgzMzQyOTMzIn0seyJvcmRlcklkIjoi
+        MjE5NzAxIiwib3JkZXJNYXN0ZXJJZCI6IjIxOTciLCJ0b3RhbEFtb3VudCI6
+        NDU3LjgwLCJwdXJjaGFzZURhdGUiOiIyMDE0LTA1LTEzVDIxOjA2OjA1LjAw
+        MC0wMzowMCIsImZyZWlnaHRDaGFyZ2VkQW1vdW50IjoyMCwiZnJlaWdodEFj
+        dHVhbEFtb3VudCI6MjAsIm9yZGVySXRlbXMiOlt7Im9yZGVySXRlbUlkIjoi
+        MjE5NDc4NzYtMSIsInNrdUlkIjoiMjE5NDc4NzYiLCJzYWxlUHJpY2UiOjIx
+        OS45MCwiZGVsaXZlcnlEYXRlIjoiMjAxNC0wNS0xM1QwMDowMDowMC4wMDAt
+        MDM6MDAiLCJmcmVpZ2h0VGltZSI6MSwibGVhZFRpbWUiOjF9LHsib3JkZXJJ
+        dGVtSWQiOiIyMTk0Nzg3Ni0yIiwic2t1SWQiOiIyMTk0Nzg3NiIsInNhbGVQ
+        cmljZSI6MjE5LjkwLCJkZWxpdmVyeURhdGUiOiIyMDE0LTA1LTEzVDAwOjAw
+        OjAwLjAwMC0wMzowMCIsImZyZWlnaHRUaW1lIjoxLCJsZWFkVGltZSI6MX0s
+        eyJvcmRlckl0ZW1JZCI6IjIxOTMyODk0LTEiLCJza3VJZCI6IjIxOTMyODk0
+        Iiwic2FsZVByaWNlIjo5LjAwLCJkZWxpdmVyeURhdGUiOiIyMDE0LTA1LTEz
+        VDAwOjAwOjAwLjAwMC0wMzowMCIsImZyZWlnaHRUaW1lIjoxLCJsZWFkVGlt
+        ZSI6MX0seyJvcmRlckl0ZW1JZCI6IjIxOTMyODk0LTIiLCJza3VJZCI6IjIx
+        OTMyODk0Iiwic2FsZVByaWNlIjo5LjAwLCJkZWxpdmVyeURhdGUiOiIyMDE0
+        LTA1LTEzVDAwOjAwOjAwLjAwMC0wMzowMCIsImZyZWlnaHRUaW1lIjoxLCJs
+        ZWFkVGltZSI6MX1dLCJiaWxsaW5nSW5mb3JtYXRpb25zIjpbeyJhZGRyZXNz
+        IjoiQXZlbmlkYSBQYXVsaXN0YSIsImFkZHJlc3NOciI6IjE4OTciLCJhZGRp
+        dGlvbmFsSW5mbyI6IkFwIDEwMSIsInF1YXJ0ZXIiOiJDZW50cm8iLCJjaXR5
+        IjoiU8OjbyBQYXVsbyIsInN0YXRlIjoiU1AiLCJjb3VudHJ5SWQiOiJCUiIs
+        InBvc3RhbENkIjoiMTIzNDUwMDAiLCJyZWZlcmVuY2UiOm51bGwsImFkZHJl
+        c3NFeHRyYUZpZWxkMSI6bnVsbCwiYWRkcmVzc0V4dHJhRmllbGQyIjpudWxs
+        LCJidWlsZGluZ05tIjpudWxsfV0sInNoaXBwaW5nSW5mb3JtYXRpb25zTGlz
+        dCI6W3siZGVsaXZlcnlUeXBlIjoiTk9SIiwic2NoZWR1bGVkRGF0ZSI6bnVs
+        bCwic2NoZWR1bGVkUGVyaW9kIjpudWxsLCJyZWNpcGllbnROYW1lIjoiQ2xp
+        ZW50ZU1hcmt0cGxhY2UiLCJhZGRyZXNzIjoiQXZlbmlkYSBQYXVsaXN0YSIs
+        ImFkZHJlc3NOciI6IjE4OTciLCJhZGRpdGlvbmFsSW5mbyI6IkFwIDEwMSIs
+        InF1YXJ0ZXIiOiJDZW50cm8iLCJjaXR5IjoiU8OjbyBQYXVsbyIsInN0YXRl
+        IjoiU1AiLCJjb3VudHJ5SWQiOiJCUiIsInBvc3RhbENkIjoiMTIzNDUwMDAi
+        LCJyZWZlcmVuY2UiOm51bGwsImFkZHJlc3NFeHRyYUZpZWxkMSI6bnVsbCwi
+        YWRkcmVzc0V4dHJhRmllbGQyIjpudWxsLCJidWlsZGluZ05tIjpudWxsfV0s
+        ImRvY3VtZW50TnIiOiIwMDAwMDEyMzQ1NiIsImluc2NyaWNhb0VzdGFkdWFs
+        IjpudWxsLCJjdXN0b21lckVtYWlsIjoiYXRlbmRpbWVudG8rT0NfMjA5MDAw
+        MTAwNzEwQG1rdHAuZXh0cmEuY29tLmJyIiwiY3VzdG9tZXJOYW1lIjoiQ2xp
+        ZW50ZSBNYXJrdHBsYWNlIiwiY3VzdG9tZXJHZW5kZXIiOiJNIiwicGF5bWVu
+        dFRwSWQiOjEsImZyZWlnaHRBZGRpdGlvbmFsSW5mbyI6bnVsbCwiYXBwcm92
+        ZWREYXRlIjpudWxsLCJ0cmFja2luZ0xpc3QiOltdLCJjdXN0b21lclBob25l
+        TnVtYmVyIjoiODMzNDI5MzMifV0=
+    http_version: 
+  recorded_at: Wed, 14 May 2014 15:19:25 GMT
+recorded_with: VCR 2.8.0
