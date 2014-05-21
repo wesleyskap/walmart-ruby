@@ -16,4 +16,12 @@ describe Extra::Order do
       end
     end
   end
+
+  describe ".canceled" do
+    it "returns the canceled orders details" do
+      VCR.use_cassette('orders_canceled') do
+        Extra::Order.canceled.first["purchaseDate"].should == "2014-05-13T22:14:39.000-03:00"
+      end
+    end
+  end
 end

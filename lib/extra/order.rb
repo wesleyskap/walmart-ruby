@@ -8,6 +8,10 @@ module Extra
       fetch :approved
     end
 
+    def self.canceled
+      fetch :canceled
+    end
+
     private
 
     def self.fetch(status)

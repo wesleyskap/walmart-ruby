@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.extra.com.br/api/v1/orders/status/canceled?_limit=25&_offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Nova-Auth-Token:
+      - WOzY6C8kEFGM
+      Nova-App-Token:
+      - OmehvO0ZHM2s
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 May 2014 19:27:08 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '2'
+      Keep-Alive:
+      - timeout=60, max=900
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      Totalrows:
+      - '0'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: !binary |-
+        W3sib3JkZXJJZCI6IjIxOTgwMSIsIm9yZGVyTWFzdGVySWQiOiIyMTk4Iiwi
+        dG90YWxBbW91bnQiOjQ1Ny44MCwicHVyY2hhc2VEYXRlIjoiMjAxNC0wNS0x
+        M1QyMjoxNDozOS4wMDAtMDM6MDAiLCJmcmVpZ2h0Q2hhcmdlZEFtb3VudCI6
+        MjAsImZyZWlnaHRBY3R1YWxBbW91bnQiOjIwLCJvcmRlckl0ZW1zIjpbeyJv
+        cmRlckl0ZW1JZCI6IjIxOTQ3ODc2LTEiLCJza3VJZCI6IjIxOTQ3ODc2Iiwi
+        c2FsZVByaWNlIjoyMTkuOTAsImRlbGl2ZXJ5RGF0ZSI6IjIwMTQtMDUtMTNU
+        MDA6MDA6MDAuMDAwLTAzOjAwIiwiZnJlaWdodFRpbWUiOjEsImxlYWRUaW1l
+        IjoxfSx7Im9yZGVySXRlbUlkIjoiMjE5NDc4NzYtMiIsInNrdUlkIjoiMjE5
+        NDc4NzYiLCJzYWxlUHJpY2UiOjIxOS45MCwiZGVsaXZlcnlEYXRlIjoiMjAx
+        NC0wNS0xM1QwMDowMDowMC4wMDAtMDM6MDAiLCJmcmVpZ2h0VGltZSI6MSwi
+        bGVhZFRpbWUiOjF9LHsib3JkZXJJdGVtSWQiOiIyMTkzMjg5NC0xIiwic2t1
+        SWQiOiIyMTkzMjg5NCIsInNhbGVQcmljZSI6OS4wMCwiZGVsaXZlcnlEYXRl
+        IjoiMjAxNC0wNS0xM1QwMDowMDowMC4wMDAtMDM6MDAiLCJmcmVpZ2h0VGlt
+        ZSI6MSwibGVhZFRpbWUiOjF9LHsib3JkZXJJdGVtSWQiOiIyMTkzMjg5NC0y
+        Iiwic2t1SWQiOiIyMTkzMjg5NCIsInNhbGVQcmljZSI6OS4wMCwiZGVsaXZl
+        cnlEYXRlIjoiMjAxNC0wNS0xM1QwMDowMDowMC4wMDAtMDM6MDAiLCJmcmVp
+        Z2h0VGltZSI6MSwibGVhZFRpbWUiOjF9XSwiYmlsbGluZ0luZm9ybWF0aW9u
+        cyI6W3siYWRkcmVzcyI6IkF2ZW5pZGEgUGF1bGlzdGEiLCJhZGRyZXNzTnIi
+        OiIxODk3IiwiYWRkaXRpb25hbEluZm8iOiJBcCAxMDEiLCJxdWFydGVyIjoi
+        Q2VudHJvIiwiY2l0eSI6IlPDo28gUGF1bG8iLCJzdGF0ZSI6IlNQIiwiY291
+        bnRyeUlkIjoiQlIiLCJwb3N0YWxDZCI6IjEyMzQ1MDAwIiwicmVmZXJlbmNl
+        IjpudWxsLCJhZGRyZXNzRXh0cmFGaWVsZDEiOm51bGwsImFkZHJlc3NFeHRy
+        YUZpZWxkMiI6bnVsbCwiYnVpbGRpbmdObSI6bnVsbH1dLCJzaGlwcGluZ0lu
+        Zm9ybWF0aW9uc0xpc3QiOlt7ImRlbGl2ZXJ5VHlwZSI6Ik5PUiIsInNjaGVk
+        dWxlZERhdGUiOm51bGwsInNjaGVkdWxlZFBlcmlvZCI6bnVsbCwicmVjaXBp
+        ZW50TmFtZSI6IkNsaWVudGVNYXJrdHBsYWNlIiwiYWRkcmVzcyI6IkF2ZW5p
+        ZGEgUGF1bGlzdGEiLCJhZGRyZXNzTnIiOiIxODk3IiwiYWRkaXRpb25hbElu
+        Zm8iOiJBcCAxMDEiLCJxdWFydGVyIjoiQ2VudHJvIiwiY2l0eSI6IlPDo28g
+        UGF1bG8iLCJzdGF0ZSI6IlNQIiwiY291bnRyeUlkIjoiQlIiLCJwb3N0YWxD
+        ZCI6IjEyMzQ1MDAwIiwicmVmZXJlbmNlIjpudWxsLCJhZGRyZXNzRXh0cmFG
+        aWVsZDEiOm51bGwsImFkZHJlc3NFeHRyYUZpZWxkMiI6bnVsbCwiYnVpbGRp
+        bmdObSI6bnVsbH1dLCJkb2N1bWVudE5yIjoiMDAwMDAxMjM0NTYiLCJpbnNj
+        cmljYW9Fc3RhZHVhbCI6bnVsbCwiY3VzdG9tZXJFbWFpbCI6ImF0ZW5kaW1l
+        bnRvK09DXzIwOTAwMDEwMDgxMEBta3RwLmV4dHJhLmNvbS5iciIsImN1c3Rv
+        bWVyTmFtZSI6IkNsaWVudGUgTWFya3RwbGFjZSIsImN1c3RvbWVyR2VuZGVy
+        IjoiTSIsInBheW1lbnRUcElkIjoxLCJmcmVpZ2h0QWRkaXRpb25hbEluZm8i
+        Om51bGwsImFwcHJvdmVkRGF0ZSI6bnVsbCwidHJhY2tpbmdMaXN0IjpbXSwi
+        Y3VzdG9tZXJQaG9uZU51bWJlciI6IjgzMzQyOTMzIn1d
+    http_version: 
+  recorded_at: Wed, 21 May 2014 19:27:09 GMT
+recorded_with: VCR 2.8.0
