@@ -24,10 +24,6 @@ module Extra
       execute(:post, path, body: body, &block)
     end
 
-    def put(resource, path, body)
-      self.class.execute(:put, path, body: body)
-    end
-
     def self.execute(method, path, params = {}, &block)
       params[:payload] = JSON.generate(params[:body]) if params[:body]
       headers = { content_type: 'application/json', :'nova-auth-token' => auth_token, :'nova-app-token' => app_token }
@@ -52,6 +48,10 @@ module Extra
 
     def self.to_params(params)
       params.map { |key, value| "#{key}=#{value}" }.join "&"
+    end
+
+    def self.camelize(key)
+      key.to_s.split(/_/).map{ |word| word.capitalize }.join('')
     end
   end
 end

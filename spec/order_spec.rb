@@ -24,4 +24,12 @@ describe Extra::Order do
       end
     end
   end
+
+  describe ".track!" do
+    it "returns the new orders details" do
+      VCR.use_cassette('orders_track') do
+        Extra::Order.new('id' => "219801").track!(orderItemId: ["21932894-1"], controlPoint: 'EPR', occurenceDt: '2014-05-21 00:00:00.00', carrierName: 'Carrie', originDeliveryId: 'SW896927135BR', accessKeyNfe: '35140513933305000289550010000594411422441779')['status'].should == '1'
+      end
+    end
+  end
 end

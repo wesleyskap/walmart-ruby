@@ -12,6 +12,10 @@ module Extra
       fetch :canceled
     end
 
+    def track!(params)
+      JSON.parse(self.class.post("orders/#{self['id']}/ordersItems/trackings/", params))
+    end
+
     private
 
     def self.fetch(status)
