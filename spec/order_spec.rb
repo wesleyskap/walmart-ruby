@@ -32,4 +32,12 @@ describe Extra::Order do
       end
     end
   end
+
+  describe ".find" do
+    it "find an order by the id" do
+      VCR.use_cassette('orders_find') do
+        Extra::Order.find("219801")["totalAmount"].should == 457.8
+      end
+    end
+  end
 end
