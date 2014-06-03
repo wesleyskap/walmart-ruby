@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.extra.com.br/api/v1/orders/status/approved?_limit=100&_offset=0
+    uri: https://sandbox.extra.com.br/api/v1/orders/status/approved?_limit=50&_offset=0
     body:
       encoding: US-ASCII
       string: ''

@@ -23,7 +23,7 @@ module Extra
     private
 
     def self.fetch(status)
-      get("orders/status/#{status}", _offset: 0, _limit: 100)
+      get("orders/status/#{status}", _offset: 0, _limit: 50)
     end
   end
 end
