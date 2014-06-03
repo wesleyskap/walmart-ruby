@@ -7,6 +7,13 @@ describe Extra::Order do
         Extra::Order.unapproved.first['orderId'].should == '219801'
       end
     end
+
+    it "returns the second page" do
+      Extra::Order.should_receive(:get) do |url, params|
+        params[:_offset].should == 50
+      end
+      Extra::Order.unapproved(page: 2)
+    end
   end
 
   describe ".approved" do
@@ -15,6 +22,13 @@ describe Extra::Order do
         Extra::Order.approved.first["totalAmount"].should == 457.8
       end
     end
+
+    it "returns the second page" do
+      Extra::Order.should_receive(:get) do |url, params|
+        params[:_offset].should == 50
+      end
+      Extra::Order.approved(page: 2)
+    end
   end
 
   describe ".canceled" do
@@ -22,6 +36,13 @@ describe Extra::Order do
       VCR.use_cassette('orders_canceled') do
         Extra::Order.canceled.first["purchaseDate"].should == "2014-05-13T22:14:39.000-03:00"
       end
+    end
+
+    it "returns the second page" do
+      Extra::Order.should_receive(:get) do |url, params|
+        params[:_offset].should == 50
+      end
+      Extra::Order.canceled(page: 2)
     end
   end
 
