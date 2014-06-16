@@ -16,4 +16,22 @@ describe Walmart::Offer do
       offer.should_not be_persisted
     end
   end
+
+  describe "#update_price!" do
+    it "should update an offer price" do
+      offer = Walmart::Offer.new(sku: '1234567')
+      VCR.use_cassette('offer_price_success') do
+        offer.update_price!(15.00, listPrice: 20.00).should be_true
+      end
+    end
+  end
+
+  describe "#update_quantity!" do
+    it "should update an offer quantity" do
+      offer = Walmart::Offer.new(sku: '1234567')
+      VCR.use_cassette('offer_quantity_success') do
+        offer.update_quantity!(4).should be_true
+      end
+    end
+  end
 end

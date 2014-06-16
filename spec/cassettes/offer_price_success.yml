@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://adaptertester:Senhaparceiro123@adapter.waldev.com.br/ws/seller/57/catalog/offers/external/1234567/price/15.0/listPrice/20.0
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Jun 2014 18:52:28 GMT
+      X-Ticket:
+      - 1402944748759-yyYYmTkmLYTMTm8
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/xml;charset="UTF-8"
+      Content-Length:
+      - '645'
+      Server:
+      - Jetty(8.1.5.v20120716)
+      X-Cache:
+      - MISS from localhost
+      X-Cache-Lookup:
+      - MISS from localhost:3128
+      Via:
+      - 1.1 localhost (squid/3.3.10)
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><offer><id>1116771</id><name>Walmart
+        Ruby</name><description>Walmart Ruby gem</description><active>true</active><possuiImagem>true</possuiImagem><price>20.0</price><priceDiscount>15.0</priceDiscount><quantity>4</quantity><ean>1234567890123</ean><urlImage>http://images.isupply.com.br/1234567</urlImage><sellerId>57</sellerId><height>10.00</height><weight>1.00</weight><width>5.00</width><sellerSKU>1234567</sellerSKU><category><id>110991</id><name>air
+        suply_Category</name><active>true</active><id_category>1</id_category></category><brand>i-Supply</brand><images/><specifications/></offer>"
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 18:52:29 GMT
+recorded_with: VCR 2.8.0
