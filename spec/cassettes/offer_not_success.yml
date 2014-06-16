@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://adaptertester:Senhaparceiro123@adapter.waldev.com.br/ws/seller/57/catalog/offers
+    body:
+      encoding: UTF-8
+      string: "{\"id\":\"not-long\"}"
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '17'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 16 Jun 2014 15:11:45 GMT
+      Content-Type:
+      - application/xml;charset="UTF-8"
+      Origin:
+      - ADAPTER
+      Content-Length:
+      - '468'
+      Server:
+      - Jetty(8.1.5.v20120716)
+      X-Cache:
+      - MISS from localhost
+      X-Cache-Lookup:
+      - MISS from localhost:3128
+      Via:
+      - 1.1 localhost (squid/3.3.10)
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><error><summary>Error
+        on parsing input</summary><requestId>1402931505465-Rzb7DFWRRNNDbmw</requestId><failures><failure
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"validationFailure\"><message>not
+        a valid Long value</message><code>10005</code><moreInfo>http://api-mp.walmart.com.br/docs/errors.html#10005</moreInfo><domainObject>Offer</domainObject><field>id</field></failure></failures></error>"
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 15:11:45 GMT
+recorded_with: VCR 2.8.0

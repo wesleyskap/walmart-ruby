@@ -1,4 +1,4 @@
-module Extra
+module Walmart
   class Base
     def [](key)
       @data[key]
@@ -26,24 +26,24 @@ module Extra
 
     def self.execute(method, path, params = {}, &block)
       params[:payload] = JSON.generate(params[:body]) if params[:body]
-      headers = { content_type: 'application/json', :'nova-auth-token' => auth_token, :'nova-app-token' => app_token }
-      RestClient::Request.execute({ method: method, url: "#{endpoint}/#{path}", headers: headers }.merge(params), &block)
+      headers = { content_type: 'application/json' }
+      RestClient::Request.execute({ method: method, url: "#{endpoint}/#{path}", headers: headers, user: user, password: password }.merge(params), &block)
     end
 
     def self.endpoint
-      "https://#{subdomain}.extra.com.br/api/v1"
+      "http://adapter.waldev.com.br/ws/seller/#{seller_id}/catalog"
     end
 
-    def self.app_token
-      Extra.config[:app_token]
+    def self.seller_id
+      Walmart.config[:seller_id]
     end
 
-    def self.auth_token
-      Extra.config[:auth_token]
+    def self.user
+      Walmart.config[:user]
     end
 
-    def self.subdomain
-      Extra.config[:sandbox] ? "sandbox" : "api"
+    def self.password
+      Walmart.config[:password]
     end
 
     def self.to_params(params)

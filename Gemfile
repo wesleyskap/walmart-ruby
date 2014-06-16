@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in extra.gemspec
+# Specify your gem's dependencies in walmart.gemspec
 gemspec

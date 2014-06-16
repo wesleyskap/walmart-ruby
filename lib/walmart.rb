@@ -1,12 +1,10 @@
 require 'rest-client'
-require "extra/base"
-require "extra/item"
-require "extra/order"
-require "extra/product"
-require "extra/version"
+require "walmart/base"
+require "walmart/offer"
+require "walmart/version"
 require "json"
 
-module Extra
+module Walmart
   def self.config!(config)
     @config = config
   end
