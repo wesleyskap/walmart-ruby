@@ -1,22 +1,14 @@
 module Walmart
   class Order < Base
-    def shipped?
-      self[:shipped]
-    end
-
-    def ship!(params)
-      self.class.post("orders/#{self[:order_id]}/shipping-notification", params)  do |body, request, result|
-        @data[:shipped] = result.is_a?(Net::HTTPOK)
+    { ship: :shipped, cancel: :cancelled }.each do |verb, state|
+      define_method "#{verb}!" do |params|
+        self.class.post("orders/#{self[:order_id]}/#{verb == :ship ? '' : 'cancel-'}shipping-notification", params)  do |body, request, result|
+          @data[state] = result.is_a?(Net::HTTPOK)
+        end
       end
-    end
 
-    def cancelled?
-      self[:cancelled]
-    end
-
-    def cancel!(params)
-      self.class.post("orders/#{self[:order_id]}/cancel-shipping-notification", params)  do |body, request, result|
-        @data[:cancelled] = result.is_a?(Net::HTTPOK)
+      define_method "#{state}?" do
+        self[state]
       end
     end
   end
