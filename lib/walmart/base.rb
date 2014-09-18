@@ -31,7 +31,7 @@ module Walmart
     end
 
     def self.endpoint
-      "http://adapter.waldev.com.br/ws/seller/#{seller_id}/catalog"
+      "http://adapter.waldev.com.br/ws/seller/#{seller_id}"
     end
 
     def self.seller_id

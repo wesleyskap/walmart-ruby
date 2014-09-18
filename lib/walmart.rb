@@ -1,6 +1,7 @@
 require 'rest-client'
 require "walmart/base"
 require "walmart/offer"
+require "walmart/order"
 require "walmart/version"
 require "json"
 

@@ -1,7 +1,7 @@
 module Walmart
   class Offer < Base
     def self.create!(params)
-      post(:offers, params) do |body, request, result|
+      post("catalog/offers", params) do |body, request, result|
         new persisted: result.is_a?(Net::HTTPOK)
       end
     end
@@ -17,7 +17,7 @@ module Walmart
     private
 
     def put(path)
-      self.class.execute :put, "offers/external/#{@data[:sku]}/#{path}" do |response, request, status|
+      self.class.execute :put, "catalog/offers/external/#{@data[:sku]}/#{path}" do |response, request, status|
         status.class == Net::HTTPOK
       end
     end

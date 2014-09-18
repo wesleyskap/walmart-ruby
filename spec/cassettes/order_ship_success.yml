@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://adaptertester:Senhaparceiro123@adapter.waldev.com.br/ws/seller/57/orders/30000100-1/shipping-notification
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"id":"294494","quantity":1}],"trackingNumber":"SS987654321BR","courier":"Correios"}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '94'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Sep 2014 19:32:20 GMT
+      X-Ticket:
+      - 1411068740989-VBbVZZVVbRZVVNl
+      Content-Language:
+      - en-US
+      Content-Type:
+      - application/xml;charset="UTF-8"
+      Content-Length:
+      - '164'
+      Server:
+      - Jetty(8.1.5.v20120716)
+      X-Cache:
+      - MISS from localhost
+      X-Cache-Lookup:
+      - MISS from localhost:3128
+      Via:
+      - 1.1 localhost (squid/3.3.10)
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><shipmentNotificationResponse><receipt>1411068740989-VBbVZZVVbRZVVNl</receipt></shipmentNotificationResponse>
+    http_version: 
+  recorded_at: Thu, 18 Sep 2014 19:32:21 GMT
+recorded_with: VCR 2.9.3
