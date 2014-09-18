@@ -9,5 +9,15 @@ module Walmart
         @data[:shipped] = result.is_a?(Net::HTTPOK)
       end
     end
+
+    def cancelled?
+      self[:cancelled]
+    end
+
+    def cancel!(params)
+      self.class.post("orders/#{self[:order_id]}/cancel-shipping-notification", params)  do |body, request, result|
+        @data[:cancelled] = result.is_a?(Net::HTTPOK)
+      end
+    end
   end
 end
