@@ -31,7 +31,7 @@ module Walmart
     end
 
     def self.endpoint
-      "http://adapter.waldev.com.br/ws/seller/#{seller_id}"
+      "#{base_url}/ws/seller/#{seller_id}"
     end
 
     def self.seller_id
@@ -52,6 +52,10 @@ module Walmart
 
     def self.camelize(key)
       key.to_s.split(/_/).map{ |word| word.capitalize }.join('')
+    end
+
+    def self.base_url
+      Walmart.config[:sandbox] ? "http://adapter.waldev.com.br" : "https://api-mp.walmart.com.br"
     end
   end
 end

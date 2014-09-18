@@ -13,4 +13,4 @@ RSpec.configure do |config|
 end
 
 config = YAML.load(File.read('spec/config.yml'))
-Walmart.config! seller_id: config['seller_id'], user: config['user'], password: config['password']
+Walmart.config! seller_id: config['seller_id'], user: config['user'], password: config['password'], sandbox: true

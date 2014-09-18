@@ -1,6 +1,26 @@
 require 'spec_helper'
 
 describe Walmart::Offer do
+  describe ".endpoint" do
+    before :each do
+      @config = Walmart.config 
+    end
+
+    it 'should include http://adapter.waldev.com.br when sandbox' do
+      Walmart.config! sandbox: true
+      expect(Walmart::Offer.endpoint).to include("http://adapter.waldev.com.br")
+    end  
+
+    it 'should include https://api-mp.walmart.com.br when not sandbox' do
+      Walmart.config! sandbox: false
+      expect(Walmart::Offer.endpoint).to include("https://api-mp.walmart.com.br")
+    end  
+
+    after :each do
+      Walmart.config! @config
+    end
+  end
+
   describe ".create!" do
     it "should persist a valid offer" do
       offer = VCR.use_cassette('offer_success') do
