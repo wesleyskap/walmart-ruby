@@ -35,6 +35,13 @@ describe Walmart::Offer do
       end
       expect(offer).to_not be_persisted
     end
+
+    it 'should not verify the ssl as currently is invalid' do
+      expect(RestClient::Request).to receive(:execute) do |params|
+        expect(params[:verify_ssl]).to be_falsy
+      end
+      Walmart::Offer.create! id: 'not-long'
+    end
   end
 
   describe "#update_price!" do

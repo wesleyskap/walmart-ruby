@@ -27,7 +27,7 @@ module Walmart
     def self.execute(method, path, params = {}, &block)
       params[:payload] = JSON.generate(params[:body]) if params[:body]
       headers = { content_type: 'application/json' }
-      RestClient::Request.execute({ method: method, url: "#{endpoint}/#{path}", headers: headers, user: user, password: password }.merge(params), &block)
+      RestClient::Request.execute({ verify_ssl: false, method: method, url: "#{endpoint}/#{path}", headers: headers, user: user, password: password }.merge(params), &block)
     end
 
     def self.endpoint
