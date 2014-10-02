@@ -9,7 +9,7 @@ http_interactions:
         gem\",\"active\":true,\"ean\":\"1234567890123\",\"sellerSKU\":\"1234567\",\"height\":10,\"width\":5,\"weight\":1,\"price\":12.45,\"priceDiscount\":10,\"brand\":\"i-Supply\",\"urlImage\":\"http://images.isupply.com.br/1234567\"}"
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - application/json
       Accept-Encoding:
       - gzip, deflate
       Content-Type:

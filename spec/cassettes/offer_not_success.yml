@@ -8,7 +8,7 @@ http_interactions:
       string: "{\"id\":\"not-long\"}"
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - application/json
       Accept-Encoding:
       - gzip, deflate
       Content-Type:
