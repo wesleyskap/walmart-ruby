@@ -12,8 +12,8 @@ module Walmart
       self[:persisted]
     end
 
-    def self.get(path, params)
-      parse_get("#{path}?#{to_params(params)}").map { |params| new params }
+    def self.get(path, params = {})
+      [parse_get("#{path}?#{to_params(params)}")].flatten.map { |params| new params }
     end
 
     def self.parse_get(path)
@@ -26,7 +26,7 @@ module Walmart
 
     def self.execute(method, path, params = {}, &block)
       params[:payload] = JSON.generate(params[:body]) if params[:body]
-      headers = { content_type: 'application/json' }
+      headers = { accept: 'application/json' }
       RestClient::Request.execute({ verify_ssl: false, method: method, url: "#{endpoint}/#{path}", headers: headers, user: user, password: password }.merge(params), &block)
     end
 

@@ -21,6 +21,14 @@ describe Walmart::Offer do
     end
   end
 
+  describe ".find" do
+    it 'should find an offer' do
+      VCR.use_cassette('offer_find') do
+        expect(Walmart::Offer.find('1234567')['name']).to eql('Walmart Ruby')
+      end
+    end
+  end
+
   describe ".create!" do
     it "should persist a valid offer" do
       offer = VCR.use_cassette('offer_success') do
