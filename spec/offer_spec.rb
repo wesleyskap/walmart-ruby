@@ -52,6 +52,15 @@ describe Walmart::Offer do
     end
   end
 
+  describe "#update_offer!" do
+    it "should update an offer informations" do
+      offer = Walmart::Offer.new(sku: '1234567')
+      VCR.use_cassette('update_offer_success') do
+        expect(offer.update_offer!(id: 1234, name: 'Walmart Ruby', description: 'Walmart Ruby gem', active: true, ean: '1234567890123', sellerSKU: '1234567', height: 10, width: 5, weight: 1, price: 12.45, priceDiscount: 10, brand: 'i-Supply', urlImage: "http://images.isupply.com.br/1234567")).to be_truthy
+      end
+    end
+  end
+
   describe "#update_price!" do
     it "should update an offer price" do
       offer = Walmart::Offer.new(sku: '1234567')

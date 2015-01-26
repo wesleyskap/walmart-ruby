@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://adaptertester:Senhaparceiro123@adapter.waldev.com.br/ws/seller/57/catalog/offers/external/1234567/
+    body:
+      encoding: UTF-8
+      string: '{"id":1234,"name":"Walmart Ruby","description":"Walmart Ruby gem","active":true,"ean":"1234567890123","sellerSKU":"1234567","height":10,"width":5,"weight":1,"price":12.45,"priceDiscount":10,"brand":"i-Supply","urlImage":"http://images.isupply.com.br/1234567"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '259'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Mon, 26 Jan 2015 16:03:52 GMT
+      Content-Type:
+      - application/json;charset="UTF-8"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Ticket:
+      - 1422288232146-nnnnnnnnnnnnnnn
+      Content-Language:
+      - en-US
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA11Ry07DMBD8lWrPJm1K0pBc4VIhcaBCHBCqXMdNVjiO8YMq
+        qvrvrNNGkXrbx8zO7uwZsIYqTdNNUaQMNO8kVPDJVcetX7yHwwAM3E94Gxs6
+        KMWglk5YNB57fYddNLIjPBce/wjubZAMTO9cwG3HY3OqWRQESNdJlhMiZi/o
+        RB+0p+qKwW/g2qMfoMoYSB6F0vVjlm+Kp3JFEakEq8ah1Gq9N9VyiTF1Cbpg
+        jBoS0XfJwS5vvCtjusFJpaTd0u15waCV2LQ35dMUM1BSN76dKCesY0L7HizX
+        xAR82I1K0aJx3u71Y16UqoJ72fSWrjjffF6V5WwzR7ugXdWwf56A9+ZhvZ+H
+        ENNwK6NH10/MV8T8wuDqAFRf37SSkQKPSHR6lIu1yz+C0IHn7gEAAA==
+    http_version: 
+  recorded_at: Mon, 26 Jan 2015 16:03:52 GMT
+recorded_with: VCR 2.8.0

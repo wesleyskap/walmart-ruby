@@ -15,13 +15,17 @@ module Walmart
     end
 
     def update_quantity!(quantity)
-      put "quantity/#{quantity}" 
+      put "quantity/#{quantity}"
+    end
+
+    def update_offer!(params)
+      put "", params
     end
 
     private
 
-    def put(path)
-      self.class.execute :put, "catalog/offers/external/#{@data[:sku]}/#{path}" do |response, request, status|
+    def put(path, params = {})
+      self.class.execute :put, "catalog/offers/external/#{@data[:sku]}/#{path}", body: params do |response, request, status|
         status.class == Net::HTTPOK
       end
     end
