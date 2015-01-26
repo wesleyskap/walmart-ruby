@@ -18,7 +18,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Find Offer
+```ruby
+Walmart::Offer.find(sellerSKU)
+```
+
+Create Offer
+```ruby
+Walmart::Offer.create! {}
+```
+
+Update Price
+```ruby
+Walmart::Offer.new(SellerSKU).update_price! price, listPrice: list_price
+```
+
+Update Stock
+```ruby
+Walmart::Offer.new(SellerSKU).update_quantity! stock_total
+```
+
 
 ## Contributing
 
